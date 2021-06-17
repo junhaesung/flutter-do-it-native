@@ -41,7 +41,7 @@ class _NativeApp extends State<NativeApp> {
   Future<String> _getDeviceInfo() async {
     try {
       final String result = await platform.invokeMethod('getDeviceInfo');
-      return 'Device info : $result';
+      return 'Device info : \n$result';
     } on PlatformException catch (e) {
       return 'Failed to get Device info: ${e.message}.';
     }
